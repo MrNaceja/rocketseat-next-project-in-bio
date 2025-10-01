@@ -1,4 +1,5 @@
-import { Button } from "@/ui";
+import { Button } from "@ui/button";
+import { Input } from "@ui/input";
 
 export default function HomePage() {
     return (
@@ -13,6 +14,10 @@ export default function HomePage() {
             <Button variant="outline">
                 Criar agora
             </Button>
+
+            <Input placeholder="Digite o nome do conteúdo">
+                Titulo do link
+            </Input>
         </section>
     )
 }

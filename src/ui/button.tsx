@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from "react"
+import type { ComponentProps } from "react"
 import { tv, type VariantProps } from "tailwind-variants"
 
 const button = tv({
@@ -17,7 +17,7 @@ const button = tv({
 
 type ButtonVariants = VariantProps<typeof button>
 
-interface ButtonProps extends ButtonVariants, HTMLAttributes<HTMLButtonElement> { }
+interface ButtonProps extends ButtonVariants, ComponentProps<"button"> { }
 export function Button({ className, variant,...props }: ButtonProps) {
     return (
         <button className={button({ variant, className })} {...props} />
