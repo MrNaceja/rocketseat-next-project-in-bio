@@ -24,7 +24,8 @@
       "@ui/*": ["./src/ui/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@features/*": ["./src/features/*"],
-      "@public/*": ["./public/*"]
+      "@public/*": ["./public/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
