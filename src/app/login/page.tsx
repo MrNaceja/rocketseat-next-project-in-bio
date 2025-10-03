@@ -1,6 +1,7 @@
 import { Header } from "@features/login/header";
 import { Button } from "@ui/button";
 import { Input } from "@ui/input";
+import { ProjectCard } from "@ui/project-card";
 
 export default function LoginPage() {
     return (
@@ -23,6 +24,27 @@ Acompanhe o engajamento com Analytics de cliques
                         <Button type="submit">Criar agora</Button>
                     </form>
                 </article>
+
+                <div>
+                    <ProjectCard 
+                        title="Banana"
+                        description="A Banana nunca falha"
+                        interactionsAmount={24}
+                        preview="https://github.com/MrNaceja.png"
+                    />
+                    <ProjectCard 
+                        title="Banana"
+                        description="A Banana nunca falha"
+                        interactionsAmount={9}
+                        preview="https://github.com/MrNaceja.png"
+                    />
+                    <ProjectCard 
+                        title="Banana"
+                        description="A Banana nunca falha"
+                        interactionsAmount={0}
+                        preview="https://github.com/MrNaceja.png"
+                    />
+                </div>
 
 
             </section>
