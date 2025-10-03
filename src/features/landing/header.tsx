@@ -1,24 +1,24 @@
+import { LandingSections } from "@features/landing/sections";
 import logo from "@public/logo.svg";
-import { Button } from "@ui/button";
+import { NavLink } from "@ui/nav-link";
 import Image from "next/image";
-import Link from "next/link";
 
 type SectionNavigation = {
-  target: "hero" | "pricing" | "answers";
+  target: LandingSections;
   label: string;
 };
 
 const sectionsNavigation: SectionNavigation[] = [
   {
-    target: "hero",
+    target: LandingSections.HERO,
     label: "Inicio",
   },
   {
-    target: "pricing",
+    target: LandingSections.PRICING,
     label: "Preço",
   },
   {
-    target: "answers",
+    target: LandingSections.ANSWERS,
     label: "FAQ",
   },
 ];
@@ -28,26 +28,24 @@ export function Header() {
     <header className="px-20 py-10">
       <div className="container flex items-center justify-between gap-3">
         <nav className="space-x-6">
-        {sectionsNavigation.map(({ target, label }) => (
-          <Link
-            href={`#${target}`}
-            key={target}
-            className="text-content-headline typografy-label hover:text-content-heading"
-          >
-            {label}
-          </Link>
-        ))}
-      </nav>
+          {sectionsNavigation.map(({ target, label }) => (
+            <NavLink href={`#${target}`} key={target}>
+              {label}
+            </NavLink>
+          ))}
+        </nav>
 
-      <Image
-        src={logo}
-        alt="ProjectInBio Logotipo"
-        className="flex-1 max-w-56"
-      />
+        <Image
+          src={logo}
+          alt="ProjectInBio Logotipo"
+          className="flex-1 max-w-56"
+        />
 
-      <aside>
-        <Button className="min-w-32">Login</Button>
-      </aside>
+        <aside>
+          <NavLink href="/login" className="text-center min-w-32" variant="primary">
+            Login
+          </NavLink>
+        </aside>
       </div>
     </header>
   );

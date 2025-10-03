@@ -1,8 +1,9 @@
 import { PlanCard } from "@features/landing/plan-card"
+import { LandingSections } from "@features/landing/sections"
 
 export function PricingSection() {
     return (
-        <section className="min-h-screen container gap-6 px-20 flex flex-col items-center justify-center">
+        <section className="min-h-screen container gap-6 px-20 flex flex-col items-center justify-center" id={LandingSections.PRICING}>
             <div className="flex flex-col items-center gap-6 text-center">
                 <h2 className="text-content-heading typografy-heading-medium">Um valor acessível para todos</h2>
                 <p className="text-content-body typografy-body-large max-w-[50%]">

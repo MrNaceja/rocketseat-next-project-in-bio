@@ -33,6 +33,10 @@ body {
   @apply antialiased bg-background-primary text-content-heading font-sans typografy-body-medium;
 }
 
+html {
+    @apply scroll-smooth;
+}
+
 @utility typografy-heading-large {
     @apply text-5xl leading-16 font-bold;
 }

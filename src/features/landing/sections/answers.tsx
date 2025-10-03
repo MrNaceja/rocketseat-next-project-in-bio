@@ -1,3 +1,5 @@
+import { LandingSections } from "@features/landing/sections"
+
 type Answer = {
     title: string,
     description: string
@@ -32,7 +34,7 @@ const answers: Answer[] = [
 
 export function AnswersSection() {
     return (
-        <section className="min-h-screen container gap-8 px-20 flex flex-col items-center">
+        <section className="min-h-screen container gap-8 px-20 flex flex-col items-center" id={LandingSections.ANSWERS}>
             <h1 className="text-content-heading typografy-heading-large text-center">Dúvidas frequentes</h1>
 
             <article className="grid grid-cols-2 gap-3 max-w-2xl">
