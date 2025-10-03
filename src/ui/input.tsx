@@ -4,12 +4,12 @@ import { tv, type VariantProps } from "tailwind-variants";
 
 const input = tv({
     slots: {
-        wrapperSlot: "space-y-2 group w-fit",
+        wrapperSlot: "space-y-2 group",
         inputSlot: `
             bg-background-secondary rounded-xl p-3 text-content-headline placeholder:text-content-placeholder typografy-body-medium
-            border border-transparent group-hover:border-border-secondary focus:border-border-tertiary
+            border border-transparent group-hover:border-border-secondary focus:border-border-tertiary w-full
         `,
-        labelSlot: "block typografy-label text-content-heading"
+        labelSlot: "block typografy-label text-content-heading w-fit"
     }
 })
 
@@ -23,13 +23,13 @@ export function Input({ className, children: label, id:_id, ...props }: InputPro
     const { wrapperSlot, inputSlot, labelSlot } = input()
 
     return (
-        <div className={wrapperSlot()}>
+        <div className={wrapperSlot({ className })}>
             {
                 label && (
                     <label htmlFor={id} className={labelSlot()}>{label}</label>
                 )
             }
-            <input type="text" id={id} {...props} className={inputSlot({ className })}/>
+            <input type="text" id={id} {...props} className={inputSlot()}/>
         </div>
     )
 }
