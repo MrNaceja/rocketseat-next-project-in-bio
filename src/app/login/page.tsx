@@ -34,14 +34,14 @@ export default function LoginPage() {
                         description="Conteúdo ficticio"
                         title="Conteúdo ficticio"
                         interactionsAmount={2}
-                        preview="https://images.unsplash.com/photo-1537884944318-390069bb8665?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        preview="https://picsum.photos/100/100"
                     />
                     <ProjectCard
                         className="z-0 absolute top-56 left-20" 
                         description="Conteúdo ficticio"
                         title="Conteúdo ficticio"
                         interactionsAmount={15}
-                        preview="https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        preview="https://picsum.photos/100/100"
                     />
                     <ProfileCard
                         className="z-10 absolute top-[50%] left-[50%] -translate-[50%]"        

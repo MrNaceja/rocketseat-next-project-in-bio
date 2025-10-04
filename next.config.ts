@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
         new URL("https://github.com/*.png"),
         {
             protocol: "https",
-            hostname: "images.unsplash.com"
+            hostname: "picsum.photos"
         }
     ]
   }
