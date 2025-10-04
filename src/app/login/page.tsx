@@ -2,6 +2,7 @@ import { Header } from "@features/login/header";
 import { Button } from "@ui/button";
 import { Input } from "@ui/input";
 import { ProjectCard } from "@ui/project-card";
+import { TotalVisits } from "@ui/total-visits";
 
 export default function LoginPage() {
     return (
@@ -44,6 +45,8 @@ Acompanhe o engajamento com Analytics de cliques
                         interactionsAmount={0}
                         preview="https://github.com/MrNaceja.png"
                     />
+
+                    <TotalVisits />
                 </div>
 
 
