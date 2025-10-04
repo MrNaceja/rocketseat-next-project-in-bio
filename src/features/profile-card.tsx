@@ -1,13 +1,22 @@
 import { Button } from "@ui/button";
+import { cn } from "@utils/classnames";
 import { Facebook, Github, Instagram, Linkedin, Plus, UserPen } from "lucide-react";
 import Image from "next/image";
+import type { ComponentProps } from "react";
 
-export function ProfileCard() {
+
+interface ProfileCardProps extends ComponentProps<'article'>{
+
+}
+export function ProfileCard({ className, ...props }: ProfileCardProps) {
     return (
-        <article className={`
-            border divide-y divide-border-primary border-border-primary bg-background-secondary p-10 flex flex-col gap-5
-            w-fit rounded-4xl [&>_:not(:last-child)]:py-3
-        `}>
+        <article className={cn(
+            `
+                border divide-y divide-border-primary border-border-primary bg-background-secondary p-10 flex flex-col gap-5
+                w-fit rounded-4xl [&>_:not(:last-child)]:py-3
+            `,
+            className
+        )} {...props}>
             <div className="flex flex-col gap-5">
                 <Image 
                     src="https://github.com/MrNaceja.png"

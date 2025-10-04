@@ -1,4 +1,6 @@
+import { cn } from "@utils/classnames"
 import Image from "next/image"
+import type { ComponentProps } from "react"
 import { tv } from "tailwind-variants"
 
 const interactionsAmountColorByAmountStatus = tv({
@@ -15,13 +17,13 @@ const interactionsAmountColorByAmountStatus = tv({
     }
 })
 
-interface ProjectCardProps {
+interface ProjectCardProps extends ComponentProps<'div'>{
     interactionsAmount: number,
     title: string,
     description: string,
     preview: string
 }
-export function ProjectCard({ title, description, preview, interactionsAmount }: ProjectCardProps) {
+export function ProjectCard({ title, description, preview, interactionsAmount, className, ...props }: ProjectCardProps) {
 
     const amountStatus = (
         interactionsAmount === 0 
@@ -34,7 +36,10 @@ export function ProjectCard({ title, description, preview, interactionsAmount }:
     )
 
     return (
-        <div className="rounded-3xl p-3 flex gap-5 bg-background-secondary w-fit min-w-96 border border-border-primary">
+        <div 
+            className={cn("rounded-3xl p-3 flex gap-5 bg-background-secondary w-fit min-w-96 border border-border-primary", className)}
+            {...props}
+        >
             <Image
                 src={preview}
                 alt={title}
