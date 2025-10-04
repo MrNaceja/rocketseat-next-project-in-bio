@@ -3,13 +3,13 @@ import type { ComponentProps } from "react"
 import { tv, type VariantProps } from "tailwind-variants"
 
 const navlink = tv({
-    base: "typografy-label text-content-heading border border-transparent transition-colors inline-block",
+    base: "typografy-label text-content-heading border border-transparent transition-colors inline-block focus-visible:ring-2 ring-accent-purple",
     variants: {
         variant: {
             plain: "text-content-headline typografy-label hover:text-content-heading",
-            outline: "border-border-primary hover:bg-background-secondary/50 rounded-xl p-3",
-            primary: "bg-accent-purple hover:bg-accent-purple/80 rounded-xl p-3",
-            secondary: "bg-background-tertiary hover:bg-background-tertiary/80 rounded-xl p-3"
+            outline: "border-border-primary hover:bg-background-tertiary/50 rounded-xl p-3",
+            primary: "bg-accent-purple hover:bg-accent-purple/70 rounded-xl p-3",
+            secondary: "bg-background-tertiary hover:bg-background-tertiary/70 rounded-xl p-3"
         }
     },
     defaultVariants: {

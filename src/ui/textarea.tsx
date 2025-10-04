@@ -7,7 +7,8 @@ const textarea = tv({
         wrapperSlot: "space-y-2 group w-fit",
         inputSlot: `
             bg-background-secondary rounded-xl p-3 text-content-headline placeholder:text-content-placeholder typografy-body-medium
-            border border-transparent group-hover:border-border-secondary focus:border-border-tertiary min-w-96
+            border border-transparent group-hover:border-border-secondary min-w-96
+            focus-within:ring-2 ring-accent-purple outline-none focus-visible:outline-none focus:outline-none
         `,
         labelSlot: "block typografy-label text-content-heading"
     }
